@@ -17,6 +17,27 @@ public class LandTest {
 	private static final int LAND_WIDTH = 400;
 	private static final int LAND_HEIGHT = 600;
 
+	@Test(expected = IllegalArgumentException.class)
+	public void testInvalidWidthException() {
+		new Land(0, 1);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testInvalidHeightException() {
+		new Land(1, 0);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testInvalidBarrenRectangleException() {
+
+		Rectangle barrenArea = new Rectangle(0, 0, 9, 9);
+
+		Set<Rectangle> barrentAreas = new HashSet<>();
+		barrentAreas.add(barrenArea);
+
+		new Land(1, 1, barrentAreas);
+	}
+
 	@Test
 	public void testFertileLand() {
 		Land land = new Land(400, 600);
