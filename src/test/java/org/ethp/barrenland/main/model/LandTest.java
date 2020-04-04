@@ -113,4 +113,30 @@ public class LandTest {
 		MatcherAssert.assertThat(fertileAreas, IsIterableContainingInOrder.contains(22816, 192608));
 	}
 
+	
+	@Test
+	public void testSecondScenarioExtended() {
+		Rectangle barrenArea0 = new Rectangle(0, 192, 399, 207);
+		Rectangle barrenArea1 = new Rectangle(0, 392, 399, 407);
+		Rectangle barrenArea2 = new Rectangle(120, 0, 135, 599);
+		Rectangle barrenArea3 = new Rectangle(260, 0, 275, 599);
+
+		Set<Rectangle> barrentAreas = new HashSet<>();
+		barrentAreas.add(barrenArea0);
+		barrentAreas.add(barrenArea1);
+		barrentAreas.add(barrenArea2);
+		barrentAreas.add(barrenArea3);
+		
+		Land land = new Land(400, 600, barrentAreas);
+		final int TOTAL_AREA = LAND_WIDTH * LAND_HEIGHT;
+		assertEquals(TOTAL_AREA, land.getArea());
+		assertEquals(209024, land.getTotalFertileArea());
+		assertEquals(30976, land.getTotalBarrenArea());
+
+		final List<Integer> fertileAreas = land.getFertileAreas();
+		assertEquals(9, fertileAreas.size());
+		
+		MatcherAssert.assertThat(fertileAreas, IsIterableContainingInOrder.contains(22080, 22816, 22816, 23040, 23040, 23808, 23808, 23808, 23808));
+	}
+
 }

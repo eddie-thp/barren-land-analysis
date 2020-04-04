@@ -178,6 +178,9 @@ public class Land extends Rectangle {
 					currentFertileArea = null;
 				}
 			}
+			// When we start processing a new row, we should consider handle as a new area
+			currentFertileAreaIndex = -1;
+			currentFertileArea = null;
 		}
 
 		// Note that the fertile area size is equal to the set size
