@@ -7,6 +7,10 @@ import java.util.Set;
 import org.ethp.barrenland.main.model.Land;
 import org.ethp.barrenland.main.model.Rectangle;
 
+/**
+ * Main class that executes the sample scenarios described in technical
+ * assessment document
+ */
 public class BarrenLandAnalysisApp {
 
 	private static final int LAND_WIDTH = 400;
@@ -17,7 +21,7 @@ public class BarrenLandAnalysisApp {
 		executeSample1();
 	}
 
-	public static void executeSample0() {
+	private static void executeSample0() {
 		Rectangle barrenArea = new Rectangle(0, 292, 399, 307);
 
 		Set<Rectangle> barrentAreas = new HashSet<>();
@@ -28,7 +32,7 @@ public class BarrenLandAnalysisApp {
 		printFertileAreas(land);
 	}
 
-	public static void executeSample1() {
+	private static void executeSample1() {
 		Rectangle barrenArea0 = new Rectangle(48, 192, 351, 207);
 		Rectangle barrenArea1 = new Rectangle(48, 392, 351, 407);
 		Rectangle barrenArea2 = new Rectangle(120, 52, 135, 547);
@@ -45,7 +49,7 @@ public class BarrenLandAnalysisApp {
 		printFertileAreas(land);
 	}
 
-	public static void printFertileAreas(Land land) {
+	private static void printFertileAreas(Land land) {
 
 		System.out.println("AREA: " + land.getArea());
 		System.out.println("FERTILE AREA: " + land.getTotalFertileArea());

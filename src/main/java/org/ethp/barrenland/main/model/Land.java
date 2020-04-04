@@ -8,11 +8,15 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * Class represents a rectangular piece of land which may contain barren
+ * rectangular areas
+ */
 public class Land extends Rectangle {
 
 	private class LandUnit {
-		int x;
-		int y;
+		private int x;
+		private int y;
 
 		public LandUnit(int x, int y) {
 			this.x = x;
@@ -37,6 +41,13 @@ public class Land extends Rectangle {
 
 	private Set<LandUnit> fertileArea;
 
+	/**
+	 * Constructs fully fertile land
+	 * 
+	 * @param width  land width, must be greater than zero.
+	 * @param height land height, must be greater than zero.
+	 * @throws InvalidParameterException
+	 */
 	public Land(int width, int height) throws InvalidParameterException {
 		super(0, 0, width - 1, height - 1);
 
@@ -57,6 +68,13 @@ public class Land extends Rectangle {
 		}
 	}
 
+	/**
+	 * Constructs fertile land with barren rectangular areas
+	 * 
+	 * @param width  land width, must be greater than zero.
+	 * @param height land height, must be greater than zero.
+	 * @throws InvalidParameterException
+	 */
 	public Land(int width, int height, Set<Rectangle> barrenRectangles) throws InvalidParameterException {
 		this(width, height);
 
@@ -109,6 +127,11 @@ public class Land extends Rectangle {
 		return fertileArea.contains(unit);
 	}
 
+	/**
+	 * Gets list of fertile areas sizes.
+	 * 
+	 * @return Sorted list of fertile areas sizes
+	 */
 	public List<Integer> getFertileAreas() {
 		// Iterate over the fertile area units, grouping them in a set if they are
 		// connected
@@ -157,7 +180,7 @@ public class Land extends Rectangle {
 			}
 		}
 
-		// The area amount is the size of the fertile area
+		// Note that the fertile area size is equal to the set size
 		List<Integer> fertileAreas = new ArrayList<>();
 		for (Set<LandUnit> fertileArea : unitFertileAreas) {
 			fertileAreas.add(fertileArea.size());

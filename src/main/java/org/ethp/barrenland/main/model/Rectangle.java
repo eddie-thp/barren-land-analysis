@@ -1,5 +1,8 @@
 package org.ethp.barrenland.main.model;
 
+/**
+ * Class represents a rectangle
+ */
 public class Rectangle {
 
 	private int left;
@@ -8,13 +11,13 @@ public class Rectangle {
 	private int top;
 
 	public Rectangle(int left, int bottom, int right, int top) throws IllegalArgumentException {
-
-		if (left >= right) {
-			throw new IllegalArgumentException("Left equals or greater than right");
+		
+		if (left < 0 || left >= right) {
+			throw new IllegalArgumentException("Left must be greater than zero and smaller than right.");
 		}
 
-		if (bottom >= top) {
-			throw new IllegalArgumentException("Bottom equals or greater than top");
+		if (bottom < 0 || bottom >= top) {
+			throw new IllegalArgumentException("Bottom must be greated than zero and smaller than top.");
 		}
 
 		this.left = left;
