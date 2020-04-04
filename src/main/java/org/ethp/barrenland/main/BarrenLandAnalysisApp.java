@@ -19,7 +19,7 @@ public class BarrenLandAnalysisApp {
 
         Land land = new Land(LAND_WIDTH, LAND_HEIGHT, barrentAreas);
 
-        System.out.println("RECT W " + barrenArea.getWidht());
+        System.out.println("RECT W " + barrenArea.getWidth());
         System.out.println("RECT H " + barrenArea.getHeight());
         System.out.println("RECT Area " + barrenArea.getArea());
         System.out.println("LAND Area " + land.getArea());

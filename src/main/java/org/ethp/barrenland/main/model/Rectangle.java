@@ -39,7 +39,7 @@ public class Rectangle {
 		return top;
 	}
 
-	public int getWidht() {
+	public int getWidth() {
 		return (right - left) + 1;
 	}
 
@@ -48,7 +48,7 @@ public class Rectangle {
 	}
 
 	public int getArea() {
-		return getWidht() * getHeight();
+		return getWidth() * getHeight();
 	}
 
 	@Override

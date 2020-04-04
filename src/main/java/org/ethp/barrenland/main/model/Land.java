@@ -36,7 +36,7 @@ public class Land extends Rectangle {
 
 	private void setBarrenRectangle(Rectangle rectangle) throws InvalidParameterException {
 		
-		final int width = getWidht();
+		final int width = getWidth();
 		final int height = getHeight();
 
 		final int left = rectangle.getLeft();
@@ -62,7 +62,7 @@ public class Land extends Rectangle {
 	 * @return total fertile area
 	 */
 	public int getTotalFertileArea() {
-		final int width = getWidht();
+		final int width = getWidth();
 		final int height = getHeight();
 
 		int fertileArea = 0;
@@ -82,7 +82,7 @@ public class Land extends Rectangle {
 	 * @return total barren area
 	 */
 	public int getTotalBarrenArea() {
-		final int width = getWidht();
+		final int width = getWidth();
 		final int height = getHeight();
 
 		int barrenArea = 0;
