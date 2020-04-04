@@ -24,5 +24,4 @@ public class RectangleTest {
 		assertEquals(500 * 400, rectangle.getArea());
 	}
 
-
 }
