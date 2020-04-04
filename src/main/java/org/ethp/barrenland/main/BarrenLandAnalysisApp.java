@@ -22,8 +22,8 @@ public class BarrenLandAnalysisApp {
         System.out.println("RECT W " + barrenArea.getWidht());
         System.out.println("RECT H " + barrenArea.getHeight());
         System.out.println("RECT Area " + barrenArea.getArea());
-        System.out.println("LAND Area " + land.getTotalArea());
-        System.out.println("FERTILE AREA " + ((land.getTotalArea() - barrenArea.getArea()) / 2));
+        System.out.println("LAND Area " + land.getArea());
+        System.out.println("FERTILE AREA " + ((land.getArea() - barrenArea.getArea()) / 2));
 
 	}
 

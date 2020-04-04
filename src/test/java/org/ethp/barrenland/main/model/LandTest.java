@@ -19,7 +19,7 @@ public class LandTest {
 	public void testSimpleConstructor() {
 		Land land = new Land(400, 600);
 		final int TOTAL_AREA = LAND_WIDTH * LAND_HEIGHT;
-		assertEquals(TOTAL_AREA, land.getTotalArea());
+		assertEquals(TOTAL_AREA, land.getArea());
 		assertEquals(TOTAL_AREA, land.getTotalFertileArea());
 		assertEquals(0, land.getTotalBarrenArea());
 	}
@@ -33,7 +33,7 @@ public class LandTest {
 		
 		Land land = new Land(400, 600, barrentAreas);
 		final int TOTAL_AREA = LAND_WIDTH * LAND_HEIGHT;
-		assertEquals(TOTAL_AREA, land.getTotalArea());
+		assertEquals(TOTAL_AREA, land.getArea());
 		assertEquals(TOTAL_AREA - barrenArea.getArea(), land.getTotalFertileArea());
 		assertEquals(barrenArea.getArea(), land.getTotalBarrenArea());
 	}
