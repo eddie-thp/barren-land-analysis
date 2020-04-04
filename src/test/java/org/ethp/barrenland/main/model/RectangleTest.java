@@ -24,4 +24,24 @@ public class RectangleTest {
 		assertEquals(500 * 400, rectangle.getArea());
 	}
 
+	@Test(expected = IllegalArgumentException.class)
+	public void testLeftNegativeException() {
+		new Rectangle(-1, 0, 1, 1);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testBottomNegativeException() {
+		new Rectangle(0, -1, 1, 1);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testLeftSmallerThanRightException() {
+		new Rectangle(1, 0, 0, 1);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testBottomSmallerThanTopException() {
+		new Rectangle(0, 1, 1, 0);
+	}
+
 }
