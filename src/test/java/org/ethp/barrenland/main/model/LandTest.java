@@ -29,7 +29,6 @@ public class LandTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testInvalidBarrenRectangleException() {
-
 		Rectangle barrenArea = new Rectangle(0, 0, 9, 9);
 
 		Set<Rectangle> barrentAreas = new HashSet<>();
@@ -112,7 +111,6 @@ public class LandTest {
 
 		MatcherAssert.assertThat(fertileAreas, IsIterableContainingInOrder.contains(22816, 192608));
 	}
-
 	
 	@Test
 	public void testSecondScenarioExtended() {
