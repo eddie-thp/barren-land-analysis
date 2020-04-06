@@ -22,3 +22,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.hamcrest:hamcrest:2.2'
 }
+
+// Configuration to show test information when running gradle from the command line
+tasks.withType(Test) { 
+  testLogging {
+    exceptionFormat "full"
+    events "started", "skipped", "passed", "failed"
+    showStandardStreams true
+  }
+}
