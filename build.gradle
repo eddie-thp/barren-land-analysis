@@ -8,7 +8,17 @@
 
 plugins {
     // Apply the java-library plugin to add support for Java Library
-    id 'java-library'
+    id 'application'
+}
+
+apply plugin : "java"
+ 
+application {
+    mainClassName = 'org.ethp.barrenland.main.BarrenLandAnalysisApp'
+}
+
+run{
+ standardInput = System.in
 }
 
 repositories {
