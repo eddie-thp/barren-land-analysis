@@ -15,16 +15,15 @@ Output all the fertile land area in square meters, sorted from smallest area to 
 
 **Sample Input** | **Sample Output**
 -----------------|------------------
-{“0 292 399 307”} | 116800  116800
-{“48 192 351 207”, “48 392 351 407”, <br>“120 52 135 547”, “260 52 275 547”} | 22816 192608
+{"0 292 399 307"} | 116800  116800
+{"48 192 351 207", "48 392 351 407", <br>"120 52 135 547", "260 52 275 547"} | 22816 192608
 
 ## Tasks
 
-- [x] Create readme.md
+- [x] Create README.md and LICENSE file
+- [x] Create main class that reads STDIN, and prints the solution to STDOUT
 - [x] Create classes that solve the problem description
 - [x] Create unit tests
-- [x] Create main class that executes the solution.
-- [ ] Modify the main class to read the input from STDIN, and print the solution to STDOUT.
 
 ## Solution
 
@@ -66,9 +65,8 @@ gradlew --rerun-tasks test
 
 ### On linux:
 
-This hasn't been tested.<br>
-To run the unit test from the command-line on linux, execute:
+To run the unit test from the shell on linux, execute:
 
 ```bash
-gradlew --rerun-tasks test
+./gradlew --rerun-tasks test
 ```
