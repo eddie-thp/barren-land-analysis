@@ -44,7 +44,7 @@ The solution was implemented as a Gradle/Java 8 project using the Eclipse JEE ID
 
 Unit tests were implemented using JUnit 4, and Hamcrest 2.2.
 
-### Using the Eclipse JEE IDE.
+### **Using the Eclipse JEE IDE**
 
 If you have Eclipse JEE IDE installed, and the Buildship plug-ing installed, you can import the project using the menu:
 
@@ -55,18 +55,20 @@ Specify the location of the code and follow the wizard to finish the import.
 
 On the gradle tasks view, you can execute the test task.
 
-### On windows:
+### **Using gradlew from the command-line**
 
-To run the unit test from the command-line on windows, execute:
+To run the applications or unit tests from the command-line execute gradlew.
+
+* run - executes the main class, waits/reads the input from stdin
 
 ```cmd
+gradlew run
+```
+* test - executes the unit tests
+
+```cmd
+gradlew test
 gradlew --rerun-tasks test
 ```
 
-### On linux:
-
-To run the unit test from the shell on linux, execute:
-
-```bash
-./gradlew --rerun-tasks test
-```
+**Note:** On linux, execute ```./gradlew <options> <task>```
